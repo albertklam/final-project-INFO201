@@ -1,17 +1,14 @@
-# Final Project Brainstorm
+# Final Project Outline
 by Albert Lam, Skyler Yesiltepe, Shreya Raj, and Natalie Roy
 
 #### Final Report Link: https://info201-ag4-final.shinyapps.io/final-project-AG4/
 
+#### Description:
+For our final project in INFO 201, we used R, Shiny, CSS, and Git to collaboratively work on a data visualization project.
 ## Domain of interest: Environment
 
 #### Why are you interested in this field/domain?
 Our team was drawn to this domain because environmental issues are current and pressing, and data on the environment is plentiful. We hope to build meaningful insights and visualizations with the vast amounts of data on areas like temperature, emissions, and air pollution.
-
-#### What other examples of data driven projects have you found related to this domain?
-1. [The EcoWest Visualizations project](https://west.stanford.edu/projects/ecowest-environmental-data-visualizations) from Stanford University takes wildfire, drought, precipitation, and snowpack data from the American West, a region particularly vulnerable to the impacts of climate change, and creates various visualizations.
-2. [This research project](https://www.nsf.gov/discoveries/disc_summ.jsp?cntn_id=189519) funded by the National Science Foundation, analyzes data of extreme rainfall events, monitors surface water dynamics, and predicts changes in coastal upwellings to refine climate predictions and analyze climatic changes.
-3. [This interactive map](https://www.epa.gov/enviroatlas/enviroatlas-interactive-map) created by the EPA allows for viewers to view raindrop flow path, 12-digit HUCs, elevation profiles, time-animated maps, and summaries of regional weather patterns.
 
 #### What data-driven questions do you hope to answer about this domain?
 1. **What is the correlation between CO2 emission and temperature data? How has this correlation changed over time?** We aim to answer this question by comparing the amount of global emissions and the change in temperature over time.
