@@ -1,0 +1,44 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  background-color: #9fa9a3;
+}
+
+p {
+  color: #f0f0f0;
+  font-family: Karla;
+  font-size: 18px;
+}
+
+h1 {
+  color: #e0d37e;
+  font-family: Karla;
+  font-size: 60px;
+}
+
+h2 {
+  color: #e0d37e;
+  font-family: Karla;
+}
+
+h4 {
+  color: #e8dea0;
+  font-family: Karla;
+}
+
+.navbar {
+  background-color: #c5d5c5;
+  font-family: Karla;
+  font-size: 20px;
+}
+
+
+a {
+  color: #FEF783;
+}
+
+a:hover {
+  color: #e3e0cc;
+}
+

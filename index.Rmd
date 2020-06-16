@@ -1,0 +1,70 @@
+---
+title: "Midpoint Deliverable"
+author: "Albert Lam, Skyler Yesiltepe, Shreya Raj, and Natalie Roy"
+date: "5/18/2020"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+source("scripts/summaryinfo.R")
+source("scripts/summaryinfotable.R")
+source("scripts/CO2_chart.R")
+source("scripts/albert_chart.R")
+source("scripts/temp_change.R")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+The domain our group was interested in is the environment. Our team was drawn to this domain because environmental issues are current and pressing, and data on the environment is plentiful. We hope to build meaningful insights and visualizations with the vast amounts of data on areas like temperature, emissions, and air pollution.
+
+We used three datasets for this assignment:
+
+- [Earth Surface Temperature Data](https://www.kaggle.com/berkeleyearth/climate-change-earth-surface-temperature-data)
+- [Global CO2 Emmissions from Fossil Fuels](https://datahub.io/core/co2-fossil-global)
+- [Air Pollution Death Rates by Country](https://ourworldindata.org/air-pollution#all-charts-preview)
+
+## Summary Information
+```{r echo=FALSE, warning=FALSE}
+summary_info_dataset <- read.csv("data/deathrates.csv", stringsAsFactors = FALSE)
+info_vals <- get_summary_info(summary_info_dataset)
+```
+
+One of the datasets we chose to discuss in this report is a dataset containing the number of deaths from various forms of air pollution in many different countries. The number of rows in this dataset is `r info_vals$num_rows`, and the number of columns is `r info_vals$num_cols`. The total number of unique locations and regions included in the dataset is `r info_vals$num_location`. The dataset contains values from as early as `r info_vals$year_min` and as recent as `r info_vals$year_max`.
+
+## Summary Table
+The purpuse of this summary table is to show the number of total deaths from air pollution per year. By using a summary table, we can easily see the total number of deaths worldwide from air pollution.
+``` {r echo=FALSE, warning=FALSE}
+info_table(summary_info_dataset)
+```
+
+This summary table takes the dataset and combines all the individual country data to show the total impact of deaths each year from air pollution. We expected that the number of deaths would go up each year, but the table shows that the total number of deaths has actually been declining from 1990 to 2017. While deaths from air pollution worldwide are still pretty high, they seem to be having a downward trend, indicating that efforts to decrease air pollution have been working to decrease the number of deaths, or perhaps healthcare services have improved which could lead to less deaths from air pollution.
+
+## Chart 1 - CO2 Emissions 
+
+This stacked bar chart attempts to understand how different kinds of fuels stack up in terms of emission amount and answer if CO2 emissions truly increase as the years go by. With a stacked bar chart, it is easy to identify and compare the amount of carbon emissions from each source per year and see how the total amount of carbon emissions for each year compares to other years. 
+
+
+``` {r echo=FALSE, warning=FALSE}
+stacked_co2_chart
+```
+
+We expected global CO2 emissions from fossil fuels to increase each year and by looking at the chart, it is evident that as the years increase, the total amount of carbon emissions increase. From the chart we also discovered how carbon emissions from cement production did not start until 1928 and carbon emissions from gas flaring did not start until 1950. When looking at each year individually, it seems as though carbon emissions from solid fuel consumption and liquid fuel consumption are the two highest forms of emissions while carbon emissions from cement production and gas flaring remain the two lowest forms of emission for each year. 
+
+## Chart 2
+This map showcases data regarding the temperature difference (in Celcius), as recorded by Berkley Earth, using the dates 06/01/1950 and 06/01/2013. By subtracting a country's average temperature on 06/01/1950 from the average temperature on 06/01/2013, we can see if there is a general trend of increasing or decreasing global temperatures, and whether certain parts of the globe are more heavily impacted.
+
+``` {r echo=FALSE, warning=FALSE}
+final_map
+```
+
+While some countries on the map are missing data, it is clear that there is a general trend towards increased average temperatures across the globe. Most of the Western Hemisphere has experienced an increase in temperature, while certain regions such as Western Europe or parts of Africa look to have experienced a decrease in temperature (specifically for the month of June). Some possible trends are revealed through this map by using temperature data from two specific dates, and more information can be revealed with further investigation.
+
+## Chart 3
+The purpose of this chart is to display the change in number of deaths caused by air pollution over time. Additionally, the plot seeks to provide a comparison for the impact of air pollution on lives by country. The countries represented in this chart are all within the top 10 global economies.
+
+``` {r echo=FALSE, warning=FALSE}
+albert_plot
+```
+
+Although it gives some comfort to see that all of the chart lines are downward-sloping, there are a few countries represented in this chart that still have high death rates from air pollution. Most notable of these is India. Although India is among the most corrupt nations in the world, they lack the fast-paced, heavily enforced policy enforcement that other countries in Asia, like China, have. This chart somewhat illustrates their difference: the gap between China and India is much larger in 2015 than in 1990. Russia exhibits a relatively unusual pattern here, where their emission levels rise at the start of the chart, stay relatively stagnant for a decade, and then follow the rest in a downward slope.
